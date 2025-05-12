@@ -16,14 +16,14 @@ while(n!=0){
    
    for(let i in romanMap){
 
-       let value=romanMap[i][0];
-       let num=romanMap[i][1];
+       let [symbol,value]=romanMap[i];
+      
 
 
-        if(num<=n){
+        if(value<=num){
 
-           ans=ans+value;
-            n=n-num;
+           ans+=symbol;
+            num-=value;
              break;
             
 }
@@ -36,3 +36,8 @@ while(n!=0){
 
 
 }
+
+	return ans;
+
+}
+module.export=convertToRoman;
